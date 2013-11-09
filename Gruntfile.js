@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     "watch": {
       "compass": {
         "tasks": "compass:compile",
-        "files": "sass/**.scss"
+        "files": ["sass/**.scss", "sass/*/**.scss"]
       },
       "jshint": {
         "tasks": 'jshint:app',
