@@ -1,0 +1,27 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    STYLE.CSS
+\*------------------------------------*/
+/**
+ * Here we pull in some variables, include the inuit.css framework, then add our
+ * project-specific components afterwards.
+ */
+
+
+/**
+ * Setup Inuit and use our own vars file
+ */
+@import "vars";
+@import "../bower_components/inuit.css/inuit";
+
+/**
+ * Start building our own files
+ */
+//@import "base/example";
+//@import "generic/example";
+//@import "example/example";
+
+/**
+ * Open example file below to see how media queries are to be structured
+ */
+//@import "breakpoints/min-w-000/min-w-000";

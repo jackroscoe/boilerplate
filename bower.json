@@ -1,0 +1,20 @@
+{
+  "name": "Boilerplate",
+  "version": "0.0.0",
+  "authors": [
+    "Jack Roscoe <jack@novni.com>"
+  ],
+  "main": "index.php",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "inuit.css": "~5.0.0"
+  }
+}
