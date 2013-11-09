@@ -24,14 +24,29 @@ module.exports = function(grunt) {
         "tasks": 'jshint:app',
         "files": 'js/main.js'
       }
+    },
+    "uglify": {
+      "my_target": {
+        "files": {
+          "js/main.min.js": "js/main.js"
+        }
+      }
+    },
+    "cssmin": {
+      "my_target": {
+        "files": {
+          "css/style.min.css": "css/style.css"
+        }
+      }
     }
   });
 
   // These plugins provide necessary tasks.
   require('load-grunt-tasks')(grunt);
 
-  // Default task.
+  // Tasks
   grunt.registerTask('dev', ['watch']);
+  grunt.registerTask('complete', ['uglify', 'cssmin']);
 
 
 };
