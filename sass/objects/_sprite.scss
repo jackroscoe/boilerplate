@@ -7,6 +7,8 @@
  * If you expect to have a large number of sprites, you may want to consider grouping them into categories such as 'social', or 'thumbnails'.
  *
  * Sprite generation can be customised to add spacing around entire groups, or even individual icons if that's what you need. See this video for more information: http://www.youtube.com/watch?v=8ZHZPxIjiS8&hd=1
+ *
+ * Name hover states with *_hover.png and Compass will automatically recognise them as hover states of the original icon
  */
 
 $sprite-components--layout: "smart";

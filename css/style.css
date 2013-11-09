@@ -2534,6 +2534,27 @@ label,
 /**
  * Basic configuration for sprite autogeneration should you need it
  */
+/*------------------------------------*\
+    $SPRITE
+\*------------------------------------*/
+/**
+ * Compass can auto generate sprites and sprite classes for you.
+ *
+ * If you expect to have a large number of sprites, you may want to consider grouping them into categories such as 'social', or 'thumbnails'.
+ *
+ * Sprite generation can be customised to add spacing around entire groups, or even individual icons if that's what you need. See this video for more information: http://www.youtube.com/watch?v=8ZHZPxIjiS8&hd=1
+ *
+ * Name hover states with *_hover.png and Compass will automatically recognise them as hover states of the original icon
+ */
+.sprite-components--sprite, .sprite-components--favicon, .sprite-components--og_image {
+  background: url('/img/../img/sprite-components--sc6328f27d0.png') no-repeat; }
+
+.sprite-components--favicon {
+  background-position: 0 0; }
+
+.sprite-components--og_image {
+  background-position: 0 -16px; }
+
 /**
  * Open example file below to see how media queries are to be structured
  */
