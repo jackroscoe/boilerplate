@@ -33,11 +33,23 @@ module.exports = function(grunt) {
       }
     },
     "cssmin": {
-      "my_target": {
+      "regular": {
         "files": {
           "css/style.min.css": "css/style.css"
         }
+      },
+      "uncss": {
+        "files": {
+          "css/style.tidy.min.css": "css/style.tidy.css"
+        }
       }
+    },
+    "uncss": {
+      "dist": {
+        "files": {
+          'css/style.tidy.css': ['index.html']
+          }
+        }
     }
   });
 

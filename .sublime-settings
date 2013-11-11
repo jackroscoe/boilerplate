@@ -8,7 +8,6 @@
     "fade_fold_buttons": false,
     "highlight_line": true,
     "highlight_modified_tabs": true,
-    "save_on_focus_lost": true,
     "scroll_past_end": true,
     "shift_tab_unindent": true,
     "tab_size": 4,
