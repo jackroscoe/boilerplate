@@ -4,7 +4,7 @@
 
     requirejs.config({
         paths: {
-            jquery: '../bower_components/jquery/jquery.min'
+            jquery: 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min'
         }
     });
 
