@@ -11,6 +11,9 @@ module.exports = function(grunt) {
       }
     },
     "jshint": {
+      "options": {
+          "reporter": require('jshint-stylish')
+      },
       "app": [
         'js/main.js'
       ]
@@ -21,15 +24,11 @@ module.exports = function(grunt) {
         "files": ["sass/**.scss", "sass/*/**.scss"]
       },
       "jshint": {
+        "options": {
+            "reporter": require('jshint-stylish')
+        },
         "tasks": 'jshint:app',
         "files": 'js/main.js'
-      }
-    },
-    "uglify": {
-      "my_target": {
-        "files": {
-          "js/main.min.js": "js/main.js"
-        }
       }
     },
     "cssmin": {
@@ -80,6 +79,6 @@ module.exports = function(grunt) {
 
   // Tasks
   grunt.registerTask('dev', ['watch']);
-  grunt.registerTask('complete', ['uglify', 'cssmin', 'requirejs']);
+  grunt.registerTask('complete', [ 'cssmin', 'requirejs']);
 
 };
