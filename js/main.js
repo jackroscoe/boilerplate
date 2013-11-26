@@ -1,6 +1,6 @@
 (function() {
 
-    'use strict';
+    "use strict";
 
     requirejs.config({
         paths: {
@@ -14,4 +14,4 @@
 
     });
 
-})();
+}());

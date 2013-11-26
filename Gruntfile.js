@@ -47,8 +47,30 @@ module.exports = function(grunt) {
     "uncss": {
       "dist": {
         "files": {
-          'css/style.tidy.css': ['index.html']
+          'css/style.tidy.css': [
+              'index.html'
+            ]
           }
+        }
+    },
+    "requirejs": {
+        "compile": {
+            "options": {
+                // path to your base js directory
+                baseUrl: 'js',
+                // this is going to be the path to the page where you include your libraries. This file includes stuff like:
+                //      require.config({}) - your require config
+                //      require['pages/page1', 'pages/page2', etc]
+                mainConfigFile: 'js/main.js',
+                name: 'main',
+                // this is the file your javascript is compiling into
+                out: 'js/main.dist.js',
+                useStrict: true,
+                preserveLicenseComments: true,
+                optimize: 'uglify2',
+                // uglify configuration here -- lots you can do with this
+                uglify2: { }
+            }
         }
     }
   });
@@ -58,7 +80,6 @@ module.exports = function(grunt) {
 
   // Tasks
   grunt.registerTask('dev', ['watch']);
-  grunt.registerTask('complete', ['uglify', 'cssmin']);
-
+  grunt.registerTask('complete', ['uglify', 'cssmin', 'requirejs']);
 
 };
