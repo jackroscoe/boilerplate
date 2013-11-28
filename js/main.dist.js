@@ -1,1 +1,0 @@
-define("pages/home",["require"],function(){return{init:function(){console.log("Initialising Home page module.")}}}),function(){"use strict";requirejs.config({paths:{jquery:"https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min"}}),require(["jquery","pages/home"],function(e,i){i.init(),console.log("test"),e("h1").css("color","green")})}(),define("main",function(){});

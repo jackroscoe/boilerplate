@@ -63,7 +63,7 @@ module.exports = function(grunt) {
                 mainConfigFile: 'js/main.js',
                 name: 'main',
                 // this is the file your javascript is compiling into
-                out: 'js/main.dist.js',
+                out: 'js/dist/main.min.js',
                 useStrict: true,
                 preserveLicenseComments: true,
                 optimize: 'uglify2',
