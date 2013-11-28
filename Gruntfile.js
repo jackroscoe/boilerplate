@@ -15,9 +15,12 @@ module.exports = function(grunt) {
           "reporter": require('jshint-stylish')
       },
       "app": [
-        'js/main.js'
+        'js/**/*.js'
       ]
     },
+    /**
+     * Whilst developing, compiles our Sass to CSS and lint our JS
+     */
     "watch": {
       "compass": {
         "tasks": "compass:compile",
@@ -27,30 +30,32 @@ module.exports = function(grunt) {
         "options": {
             "reporter": require('jshint-stylish')
         },
-        "tasks": 'jshint:app',
-        "files": 'js/main.js'
+        "tasks": 'jshint:app'
       }
     },
-    "cssmin": {
-      "regular": {
-        "files": {
-          "css/style.min.css": "css/style.css"
-        }
-      },
-      "uncss": {
-        "files": {
-          "css/style.tidy.min.css": "css/style.tidy.css"
-        }
-      }
-    },
+    /**
+     * uncss removes unused CSS. We do this before minification.
+     *
+     * See https://github.com/addyosmani/grunt-uncss
+     */
     "uncss": {
       "dist": {
         "files": {
           'css/style.tidy.css': [
-              'index.html'
-            ]
-          }
+            'index.html'
+          ]
         }
+      }
+    },
+    /**
+     * cssmin will fail if run before uncss has compiled css/style.tidy.css
+     */
+    "cssmin": {
+      "uncss": {
+        "files": {
+          "dist/css/style.tidy.min.css": "css/style.tidy.css"
+        }
+      }
     },
     "requirejs": {
         "compile": {
@@ -63,7 +68,7 @@ module.exports = function(grunt) {
                 mainConfigFile: 'js/main.js',
                 name: 'main',
                 // this is the file your javascript is compiling into
-                out: 'js/dist/main.min.js',
+                out: 'dist/js/main.min.js',
                 useStrict: true,
                 preserveLicenseComments: true,
                 optimize: 'uglify2',
@@ -74,11 +79,18 @@ module.exports = function(grunt) {
     }
   });
 
-  // These plugins provide necessary tasks.
+  /**
+   * LOAD PLUGINS
+   *
+   * We're using load-grunt-tasks which reads package.json and auto loads everything for us
+   */
   require('load-grunt-tasks')(grunt);
 
-  // Tasks
-  grunt.registerTask('dev', ['watch']);
-  grunt.registerTask('complete', [ 'cssmin', 'requirejs']);
+  /**
+   * TASKS
+   *
+   * Use `grunt watch` to listen for and compile your Sass, as well as jshinting
+   */
+  grunt.registerTask('deploy', ['uncss', 'cssmin', 'requirejs']);
 
 };
