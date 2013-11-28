@@ -24,7 +24,7 @@ module.exports = function(grunt) {
     "watch": {
       "compass": {
         "tasks": "compass:compile",
-        "files": ["sass/**.scss", "sass/*/**.scss"]
+        "files": ["styles/sass/**.scss", "styles/sass/*/**.scss"]
       },
       "jshint": {
         "options": {
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
     "uncss": {
       "dist": {
         "files": {
-          'css/style.tidy.css': [
+          'styles/css/style.tidy.css': [
             'index.html'
           ]
         }
@@ -53,7 +53,7 @@ module.exports = function(grunt) {
     "cssmin": {
       "uncss": {
         "files": {
-          "dist/css/style.tidy.min.css": "css/style.tidy.css"
+          "dist/css/style.tidy.min.css": "styles/css/style.tidy.css"
         }
       }
     },
