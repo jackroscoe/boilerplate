@@ -1,6 +1,13 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
+  /**
+   * LOAD PLUGINS
+   *
+   * We're using load-grunt-tasks which reads package.json and auto loads everything for us
+   */
+  require('load-grunt-tasks')(grunt);
+
   // Project configuration.
   grunt.initConfig({
     "compass": {
@@ -30,7 +37,8 @@ module.exports = function(grunt) {
         "options": {
             "reporter": require('jshint-stylish')
         },
-        "tasks": 'jshint:app'
+        "tasks": 'jshint:app',
+        "files": 'js/**/*.js'
       }
     },
     /**
@@ -78,13 +86,6 @@ module.exports = function(grunt) {
         }
     }
   });
-
-  /**
-   * LOAD PLUGINS
-   *
-   * We're using load-grunt-tasks which reads package.json and auto loads everything for us
-   */
-  require('load-grunt-tasks')(grunt);
 
   /**
    * TASKS

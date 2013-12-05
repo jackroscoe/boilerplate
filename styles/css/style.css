@@ -34,6 +34,9 @@
 \*------------------------------------*/
 /**
  * Place any variables that should override inuit.cssÔÇÖ defaults here.
+ *
+ * For documentation on what each variable does, see _defaults.scss
+ * in the /inuit.css directory.
  */
 /*------------------------------------*\
     $CUSTOM
@@ -2588,6 +2591,48 @@ label,
  * Start building our own files
  */
 /**
+ * Add description of this irregular object here
+ */
+/*------------------------------------*\
+    $STYLEGUIDE
+\*------------------------------------*/
+/**
+ * temp
+ */
+.style-guide {
+  max-width: 720px;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.style-guide__brand-color {
+  background-color: #4a8ec2; }
+
+.style-guide__brand-face {
+  font-family: "Helvetica Neue", sans-serif; }
+
+.style-guide__base-ui-color {
+  background-color: #cccccc; }
+
+.style-guide__base-font-family {
+  font-family: sans-serif; }
+
+.style-guide__giga-size {
+  font-size: 96px; }
+
+.style-guide__mega-size {
+  font-size: 72px; }
+
+.style-guide__kilo-size {
+  font-size: 48px; }
+
+.style-guide__milli-size {
+  font-size: 12px; }
+
+.style-guide__micro-size {
+  font-size: 10px; }
+
+/**
  * Basic configuration for sprite autogeneration should you need it
  */
 /*------------------------------------*\
@@ -2614,3 +2659,28 @@ label,
 /**
  * Open example file below to see how media queries are to be structured
  */
+.t1 {
+  color: white;
+  font-size: 48px;
+  background-color: green;
+  text-decoration: underline;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 50px;
+  padding-bottom: 150px; }
+  .grid .t1 {
+    background-color: blue; }
+
+.t2 {
+  color: white;
+  font-size: 48px;
+  background-color: green;
+  text-decoration: underline;
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 50px;
+  padding-bottom: 150px; }
+  .grid .t2 {
+    background-color: blue; }

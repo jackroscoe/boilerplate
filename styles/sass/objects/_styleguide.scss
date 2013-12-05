@@ -1,0 +1,44 @@
+/*------------------------------------*\
+    $STYLEGUIDE
+\*------------------------------------*/
+/**
+ * temp
+ */
+.style-guide {
+    max-width: 720px;
+    margin: {
+        top: 60px;
+        left: auto;
+        right: auto;
+    }
+}
+
+.style-guide__brand-color {
+    background-color: $brand-color;
+}
+.style-guide__brand-face {
+    font-family: $brand-face;
+}
+
+.style-guide__base-ui-color {
+    background-color: $base-ui-color;
+}
+.style-guide__base-font-family {
+    font-family: $base-font-family;
+}
+
+.style-guide__giga-size {
+    font-size: $giga-size;
+}
+.style-guide__mega-size {
+    font-size: $mega-size;
+}
+.style-guide__kilo-size {
+    font-size: $kilo-size;
+}
+.style-guide__milli-size {
+    font-size: $milli-size;
+}
+.style-guide__micro-size {
+    font-size: $micro-size;
+}

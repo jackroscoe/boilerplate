@@ -12,7 +12,7 @@
  * Setup Inuit and use our own vars file
  */
 @import "vars";
-@import "../bower_components/inuit.css/inuit";
+@import "../../bower_components/inuit.css/inuit";
 
 /**
  * Start building our own files
@@ -20,6 +20,11 @@
 //@import "base/example";
 //@import "generic/example";
 //@import "objects/example";
+
+/**
+ * Add description of this irregular object here
+ */
+@import "objects/styleguide";
 
 
 /**
@@ -31,3 +36,34 @@
  * Open example file below to see how media queries are to be structured
  */
 //@import "breakpoints/min-w-000/min-w-000";
+
+@mixin title-style {
+    color: white;
+    font: {
+        size: 48px;
+    }
+    background: {
+        color: green;
+    }
+    text: {
+        decoration: underline;
+        align: center;
+    }
+    padding: {
+        left: 10px;
+        right: 10px;
+        top: 50px;
+        bottom: 150px;
+    }
+    .grid & {
+        background: {
+            color: blue;
+        }
+    }
+}
+.t1 {
+    @include title-style;
+}
+.t2 {
+    @include title-style
+}
